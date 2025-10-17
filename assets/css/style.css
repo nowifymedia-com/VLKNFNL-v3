@@ -4554,9 +4554,23 @@ padding: 15px;
 
     /* Contact Us Page CSS End */
 }
+@media (max-width: 1400px) {
 
-@media screen and (max-width: 991px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 100% !important;
+    }
+}
+@media screen and (max-width: 1250px) {
 
+    .lang-button {
+            position: absolute !important;
+            top: 15px;
+            right: 60px;
+        }
     /* Common CSS Start */
     :root {
         --spacing: 80px;
@@ -6168,3 +6182,32 @@ padding: 15px;
 /*==========Responsive CSS End==========*/
 
 
+.lang-button a img{
+    width: 30px;
+    height: 30px;
+}
+.lang-button{
+    position: relative;
+}
+.lang-button a{
+    padding:10px;
+    color: #000;
+    text-decoration: none;
+}
+.lang-button-selector {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+   
+  
+    width: 100px;
+    background: #fff;
+    transform: scale(0);
+    box-shadow: 0 0 10px #00000010;
+}
+.lang-button-selector a:hover{
+    background: #00000010;
+}
+.lang-button:hover .lang-button-selector{
+    transform: scale(1);
+}
