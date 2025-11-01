@@ -1,4 +1,3 @@
-
 /*==========Common CSS Start==========*/
 :root {
     --primary-color: #000000;
@@ -104,7 +103,7 @@ p:last-child {
     color: var(--primary-color);
     font-family: var(--title-font);
     font-weight: bold;
-    
+
     display: block;
     margin-bottom: 15px;
 }
@@ -162,12 +161,12 @@ p:last-child {
     line-height: 1.3;
     color: #353535;
     font-weight: 600;
-    
+
     overflow: hidden;
     position: relative;
     text-align: center;
     padding: 5px 34px 5px 74px;
-    
+
     outline: none;
     border: none;
     transition: 0.5s;
@@ -649,7 +648,7 @@ label {
     font-size: 15px;
     line-height: 23px;
     color: var(--primary-color);
-    
+
     font-weight: 600;
     transition: 0.3s;
 }
@@ -691,7 +690,7 @@ label {
     transform: translate(-50%, -50%);
     width: 150px;
     height: 150px;
-    
+
 }
 
 
@@ -755,20 +754,23 @@ label {
     line-height: 1.3;
     position: relative;
 }
-.pro-l{
+
+.pro-l {
     padding: 18px 5px;
-    
+
     border-bottom: 2px solid #00000050;
     color: #000;
 
     font-size: 18px;
 }
-.alinksw{
+
+.alinksw {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 50px 0;
 }
+
 .main-navigation li a {
     font-size: 16px;
     line-height: 1.3;
@@ -880,11 +882,12 @@ label {
     padding-bottom: 100px;
     height: auto;
     background: var(--bg-color);
-    background: url(https://images.unsplash.com/photo-1669555059258-996a562f9fed?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470); 
-    background-repeat: no-repeat; 
+    background: url(https://images.unsplash.com/photo-1669555059258-996a562f9fed?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470);
+    background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
 }
+
 .main-banner::before {
     content: "";
     position: absolute;
@@ -1177,7 +1180,7 @@ label {
 .case-study-box {
     position: relative;
     width: 100%;
-   
+
     aspect-ratio: 1/1.2822;
     overflow: hidden;
 }
@@ -1632,7 +1635,7 @@ label {
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     margin-bottom: 23px;
-    
+
 }
 
 .team-img img {
@@ -1641,7 +1644,7 @@ label {
     object-fit: cover;
     object-position: center;
     transition: 0.5s;
-    
+
 }
 
 .team-box:hover .team-img img {
@@ -2034,7 +2037,7 @@ label {
 /*==========Footer CSS Start==========*/
 .site-footer {
     position: relative;
-    background: var(--secondary-color);
+    background: #f5f5f5;
     padding-bottom: 31px;
     overflow: hidden;
 }
@@ -2073,7 +2076,7 @@ label {
 }
 
 .h4-title.footer-title {
-    color: var(--white-color);
+    color: #353535;
     padding-bottom: 4px;
     position: relative;
     margin-bottom: 23px;
@@ -2091,7 +2094,7 @@ label {
 
 .footer-info p {
     margin-bottom: 23px;
-    color: var(--white-color);
+    color: #353535;
     opacity: 0.8;
 }
 
@@ -2108,16 +2111,16 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: #353535;
     border-radius: 50%;
     font-size: 15px;
-    color: var(--white-color);
+    color: #fff;
     transition: 0.3s;
 }
 
 .social-media a:hover {
     background: var(--primary-color);
-    color: var(--white-color);
+    color: #353535;
 }
 
 .footer-link-wp {
@@ -2136,7 +2139,7 @@ label {
 
 .footer-link ul li a {
     display: inline-block;
-    color: var(--white-color);
+    color: #353535;
     opacity: 0.8;
     transition: 0.3s;
 }
@@ -2144,7 +2147,7 @@ label {
 .footer-link ul li a:hover {
     opacity: 1;
     text-decoration: underline;
-    color: var(--white-color);
+    color: #353535;
 }
 
 .footer-contact ul {
@@ -2168,26 +2171,26 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--primary-color);
+    background: #353535;
     border-radius: 50%;
-    color: var(--white-color);
+    color: #fff;
     flex-shrink: 0;
     font-size: 15px;
 }
 
 .footer-contact ul li .text a {
-    color: var(--white-color);
+    color: #353535;
     transition: 0.3s;
     opacity: 0.8;
 }
 
 .footer-contact ul li .text a:hover {
-text-decoration: underline;
+    text-decoration: underline;
     opacity: 1;
 }
 
 .footer-bottom {
-    background: var(--white-color);
+    background: #fff;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -2345,7 +2348,7 @@ text-decoration: underline;
 
 .breadcrumb-box ul li {
     color: var(--white-color);
-   
+
     display: flex;
     align-items: center;
     font-weight: 600;
@@ -2810,6 +2813,7 @@ text-decoration: underline;
     background: var(--white-color);
     border-color: var(--border-color);
 }
+
 .whatsapp-btn {
     position: relative;
     display: flex;
@@ -2828,6 +2832,7 @@ text-decoration: underline;
     z-index: 158;
     text-decoration: none;
 }
+
 .whatsapp-btn-up {
     display: none;
     align-items: center;
@@ -2841,6 +2846,7 @@ text-decoration: underline;
     right: 0;
     z-index: 0;
 }
+
 .get-in-touch-form textarea.form-input {
     height: 100px;
     border-radius: 10px;
@@ -3163,15 +3169,17 @@ text-decoration: underline;
 
 /*==========Team Detail Page CSS Start==========*/
 .main-team-detail {
-    
+
     margin: var(--spacing) 0;
 }
-.main-team-detail-container-ow{
-background: #fff;
-border: 2px solid #00000015;
-border-radius: 15px;
-padding: 15px;
+
+.main-team-detail-container-ow {
+    background: #fff;
+    border: 2px solid #00000015;
+    border-radius: 15px;
+    padding: 15px;
 }
+
 .team-detail-img .team-social-share {
     width: 60px;
 }
@@ -3352,18 +3360,21 @@ padding: 15px;
     background: var(--primary-color);
     color: var(--white-color);
 }
-.linkCAT a{
+
+.linkCAT a {
     padding: 15px 15px;
-    background:  #00000000;
+    background: #00000000;
 }
-.linkCAT a:hover{
+
+.linkCAT a:hover {
     padding: 15px 15px;
-    background:  #00000010;
+    background: #00000010;
     border-radius: 50px;
 }
-.linkCAT.active a{
+
+.linkCAT.active a {
     padding: 15px 15px;
-    background:  #000;
+    background: #000;
     border-radius: 50px;
     color: #fff !important;
 }
@@ -3929,7 +3940,7 @@ padding: 15px;
     background: var(--primary-color);
     color: var(--white-color);
     border-radius: 30px;
-    
+
     transition: 0.3s;
 }
 
@@ -4100,7 +4111,7 @@ padding: 15px;
         padding-top: 30px;
     }
 
-    
+
     /* Banner CSS End */
 
     /* Features CSS Start */
@@ -4348,7 +4359,7 @@ padding: 15px;
         max-width: 50%;
     }
 
-   
+
 
     /* FAQ CSS End */
 
@@ -4555,6 +4566,7 @@ padding: 15px;
 
     /* Contact Us Page CSS End */
 }
+
 @media (max-width: 1400px) {
 
     .container,
@@ -4565,13 +4577,15 @@ padding: 15px;
         max-width: 100% !important;
     }
 }
+
 @media screen and (max-width: 1250px) {
 
     .lang-button {
-            position: absolute !important;
-            top: 15px;
-            right: 60px;
-        }
+        position: absolute !important;
+        top: 15px;
+        right: 60px;
+    }
+
     /* Common CSS Start */
     :root {
         --spacing: 80px;
@@ -4614,7 +4628,7 @@ padding: 15px;
     /* Header CSS Start */
     .site-header,
     .site-header.sticky-header {
-       
+
         height: 80px;
         padding: 10px 0;
     }
@@ -6183,34 +6197,37 @@ padding: 15px;
 /*==========Responsive CSS End==========*/
 
 
-.lang-button a img{
+.lang-button a img {
     width: 30px;
     height: 30px;
 }
-.lang-button{
+
+.lang-button {
     position: relative;
 }
-.lang-button a{
-    padding:10px;
+
+.lang-button a {
+    padding: 10px;
     color: #000;
     text-decoration: none;
 }
+
 .lang-button-selector {
     position: absolute;
     display: flex;
     flex-direction: column;
-   
-  
+
+
     width: 100px;
     background: #fff;
     transform: scale(0);
     box-shadow: 0 0 10px #00000010;
 }
-.lang-button-selector a:hover{
+
+.lang-button-selector a:hover {
     background: #00000010;
 }
-.lang-button:hover .lang-button-selector{
+
+.lang-button:hover .lang-button-selector {
     transform: scale(1);
 }
-
-

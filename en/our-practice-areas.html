@@ -457,10 +457,50 @@
 										</div>
 									</li>
 								</ul>
-								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7564183611207!2d28.832530100000003!3d40.9868143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3feca109815%3A0xbbab8f6abfc174ba!2sEGS%20Business%20Park!5e0!3m2!1sen!2str!4v1758461893624!5m2!1sen!2str"
-									width="100%" height="250" style="border:0; border-radius: 11px; margin-top: 15px;"
-									allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								<div style="position: relative; width: 100%;">
+									<iframe
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7564183611207!2d28.832530100000003!3d40.9868143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3feca109815%3A0xbbab8f6abfc174ba!2sEGS%20Business%20Park!5e0!3m2!1str!2str!4v1758461893624!5m2!1str!2str"
+										width="100%" height="250" style="border:0; border-radius: 11px; margin-top: 15px;" allowfullscreen=""
+										loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+									</iframe>
+								
+									<button onclick="shareLocation()" style="
+																		margin-top: 12px;
+																		background: #ffffff00;
+																		
+																		color: #111;
+																		padding: 8px 20px;
+																		border: 1px solid #111;
+																		border-radius: 8px;
+																		cursor: pointer;
+																		font-weight: 600;
+																		font-size: 15px;
+																		transition: all 0.25s ease;
+																		display: flex;
+																		align-items: center;
+																		
+																		gap: 8px;
+																	">
+										<img width="15" height="15" src="https://img.icons8.com/material-sharp/22/share.png" alt="share" />
+										Share
+									</button>
+								</div>
+								
+								<script>
+									function shareLocation() {
+											if (navigator.share) {
+												navigator.share({
+													title: 'EGS Business Park',
+													text: 'You can check the location here:',
+													url: 'https://goo.gl/maps/5xH1QdVZgbsJ3RqE9'
+												})
+													.catch(err => console.log('Share canceled or failed: ', err));
+											} else {
+												alert('Sharing is not supported in this browser.');
+											}
+										}
+
+								</script>
 							</div>
 						</div>
 					</div>
