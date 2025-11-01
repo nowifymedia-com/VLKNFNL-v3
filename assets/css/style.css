@@ -2034,7 +2034,7 @@ label {
 /*==========Footer CSS Start==========*/
 .site-footer {
     position: relative;
-    background: var(--secondary-color);
+    background: #f5f5f5;
     padding-bottom: 31px;
     overflow: hidden;
 }
@@ -2073,7 +2073,7 @@ label {
 }
 
 .h4-title.footer-title {
-    color: var(--white-color);
+    color: #353535;
     padding-bottom: 4px;
     position: relative;
     margin-bottom: 23px;
@@ -2091,7 +2091,7 @@ label {
 
 .footer-info p {
     margin-bottom: 23px;
-    color: var(--white-color);
+    color: #353535;
     opacity: 0.8;
 }
 
@@ -2108,16 +2108,16 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: #353535;
     border-radius: 50%;
     font-size: 15px;
-    color: var(--white-color);
+    color: #fff;
     transition: 0.3s;
 }
 
 .social-media a:hover {
     background: var(--primary-color);
-    color: var(--white-color);
+    color: #353535;
 }
 
 .footer-link-wp {
@@ -2136,7 +2136,7 @@ label {
 
 .footer-link ul li a {
     display: inline-block;
-    color: var(--white-color);
+    color: #353535;
     opacity: 0.8;
     transition: 0.3s;
 }
@@ -2144,7 +2144,7 @@ label {
 .footer-link ul li a:hover {
     opacity: 1;
     text-decoration: underline;
-    color: var(--white-color);
+    color: #353535;
 }
 
 .footer-contact ul {
@@ -2168,15 +2168,15 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--primary-color);
+    background: #353535;
     border-radius: 50%;
-    color: var(--white-color);
+    color: #fff;
     flex-shrink: 0;
     font-size: 15px;
 }
 
 .footer-contact ul li .text a {
-    color: var(--white-color);
+    color: #353535;
     transition: 0.3s;
     opacity: 0.8;
 }
@@ -2187,7 +2187,7 @@ text-decoration: underline;
 }
 
 .footer-bottom {
-    background: var(--white-color);
+    background: #fff;
     height: 80px;
     display: flex;
     justify-content: space-between;

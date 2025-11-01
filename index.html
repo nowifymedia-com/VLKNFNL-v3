@@ -126,9 +126,9 @@
 				<div class="row align-items-center">
 					<div class="col-lg-6">
 						<div class="banner-content">
-							<span style="color: #fff;" class="sub-title wow fadeup-animation">Volkan Aksu + Partners</span>
+							<span style="color: #fff;" class="sub-title wow fadeup-animation"></span>
 							<h1 style="color: #fff;" class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
-								Hukuk Bürosu & Arabuluculuk
+								
 							</h1>
 							<!-- <p style="color: #fff;" class="wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
 								Bireysel ve kurumsal müvekkillerimize dava takibi ve hukuki danışmanlık sağlıyoruz.
@@ -748,10 +748,50 @@
 										</div>
 									</li>
 								</ul>
-								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7564183611207!2d28.832530100000003!3d40.9868143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3feca109815%3A0xbbab8f6abfc174ba!2sEGS%20Business%20Park!5e0!3m2!1str!2str!4v1758461893624!5m2!1str!2str"
-									width="100%" height="250" style="border:0; border-radius: 11px; margin-top: 15px;" allowfullscreen="" loading="lazy"
-									referrerpolicy="no-referrer-when-downgrade"></iframe>
+								<div style="position: relative; width: 100%;">
+									<iframe
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7564183611207!2d28.832530100000003!3d40.9868143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3feca109815%3A0xbbab8f6abfc174ba!2sEGS%20Business%20Park!5e0!3m2!1str!2str!4v1758461893624!5m2!1str!2str"
+										width="100%" height="250" style="border:0; border-radius: 11px; margin-top: 15px;" allowfullscreen=""
+										loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+									</iframe>
+								
+									<button onclick="shareLocation()" style="
+										margin-top: 12px;
+										background: #ffffff00;
+										
+										color: #111;
+										padding: 8px 20px;
+										border: 1px solid #111;
+										border-radius: 8px;
+										cursor: pointer;
+										font-weight: 600;
+										font-size: 15px;
+										transition: all 0.25s ease;
+										display: flex;
+										align-items: center;
+										
+										gap: 8px;
+									">
+										<img width="15" height="15" src="https://img.icons8.com/material-sharp/22/share.png" alt="share" />
+										Paylaş
+									</button>
+								</div>
+								
+								<script>
+									function shareLocation() {
+										if (navigator.share) {
+											navigator.share({
+												title: 'EGS Business Park',
+												text: 'Konumu buradan görebilirsin:',
+												url: 'https://goo.gl/maps/5xH1QdVZgbsJ3RqE9'
+											})
+												.catch(err => console.log('Paylaşım iptal edildi veya hata: ', err));
+										} else {
+											alert('Paylaşım bu tarayıcıda desteklenmiyor.');
+										}
+									}
+								</script>
+
 							</div>
 						</div>
 					</div>
@@ -813,6 +853,143 @@
 	<!-- Custom JS Link -->
 	<script src="./assets/js/custom.js"></script>
 	<script src="./assets/js/custom-scroll-count.js"></script>
+
+
+
+	<!-- Overlay -->
+	<div id="introOverlay">
+		<img src="assets/images/logo.png" alt="Logo" class="overlay-logo">
+		<div class="button-exchange">
+			<a id="turkishBtn">
+				<img width="20" height="20" src="https://img.icons8.com/color/25/turkey.png" alt="turkey" />
+				Türkçe
+			</a>
+			<a id="englishBtn">
+				<img width="20" height="20" src="https://img.icons8.com/color/25/great-britain.png" alt="english" />
+				English
+			</a>
+		</div>
+	</div>
+	
+	<style>
+		
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			/* başta scroll kilit */
+		}
+	
+
+		#introOverlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			z-index: 999999999;
+			transition: transform 1.2s ease, opacity 1s ease;
+		}
+	
+		.overlay-logo {
+			max-width: 350px;
+			height: auto;
+			padding: 10px;
+		}
+		.button-exchange{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+			margin-top: 15px;
+			
+		}
+		.button-exchange a{
+			border: 1px solid #31619e50;
+			padding: 5px 15px !important;
+			transition: .5s ease all;
+			cursor: pointer;
+		}
+		.button-exchange a:hover{
+			background: #31619e20;
+		
+		}
+	
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: scale(0.9);
+			}
+	
+			to {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	
+		.hideOverlay {
+			transform: translateY(-100%);
+			opacity: 0;
+		}
+	</style>
+	
+	<script>
+		const overlay = document.getElementById('introOverlay');
+		const turkishBtn = document.getElementById('turkishBtn');
+		const englishBtn = document.getElementById('englishBtn');
+
+		function lockScroll() {
+			document.documentElement.style.overflow = 'hidden';
+			document.body.style.overflow = 'hidden';
+		}
+
+		function unlockScroll() {
+			document.documentElement.style.overflow = 'auto';
+			document.body.style.overflow = 'auto';
+		}
+
+		function closeOverlay(saveToLocal = false) {
+			if (!overlay.classList.contains('hideOverlay')) {
+				overlay.classList.add('hideOverlay');
+
+				setTimeout(unlockScroll, 500);
+				setTimeout(() => overlay.remove(), 1200);
+
+				if (saveToLocal) {
+					let count = parseInt(localStorage.getItem('languageSelectedCount') || '0');
+					count++;
+					localStorage.setItem('languageSelectedCount', count);
+				}
+			}
+		}
+
+		window.addEventListener('DOMContentLoaded', () => {
+			let count = parseInt(localStorage.getItem('languageSelectedCount') || '0');
+
+			if (count >= 2) {
+				// kullanıcı iki kere işlem yaptıysa artık göstermiyoruz
+				overlay.style.display = 'none';
+				unlockScroll();
+				return;
+			}
+
+			lockScroll();
+			setTimeout(() => closeOverlay(false), 10000);
+		});
+
+		turkishBtn.addEventListener('click', () => closeOverlay(true));
+
+		englishBtn.addEventListener('click', () => {
+			let count = parseInt(localStorage.getItem('languageSelectedCount') || '0');
+			localStorage.setItem('languageSelectedCount', count + 1);
+			window.location.href = '/en/index.html';
+		});
+	</script>
 </body>
 
 </html>
